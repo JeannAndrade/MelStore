@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MelStore", "MelStore\MelStore.csproj", "{FAA7EFA4-5EB1-4617-9181-A0CF87E2BBDD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MelStore.Tests", "MelStore.Tests\MelStore.Tests.csproj", "{5283A4C4-C2FB-4626-8532-9D94FD014424}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MelStore.Core", "MelStore.Core\MelStore.Core.csproj", "{0CCA197B-48EC-4EA6-9904-0F8E46702061}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FAA7EFA4-5EB1-4617-9181-A0CF87E2BBDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FAA7EFA4-5EB1-4617-9181-A0CF87E2BBDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FAA7EFA4-5EB1-4617-9181-A0CF87E2BBDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FAA7EFA4-5EB1-4617-9181-A0CF87E2BBDD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5283A4C4-C2FB-4626-8532-9D94FD014424}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5283A4C4-C2FB-4626-8532-9D94FD014424}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5283A4C4-C2FB-4626-8532-9D94FD014424}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5283A4C4-C2FB-4626-8532-9D94FD014424}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0CCA197B-48EC-4EA6-9904-0F8E46702061}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0CCA197B-48EC-4EA6-9904-0F8E46702061}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0CCA197B-48EC-4EA6-9904-0F8E46702061}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0CCA197B-48EC-4EA6-9904-0F8E46702061}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

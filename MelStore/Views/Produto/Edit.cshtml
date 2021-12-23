@@ -1,0 +1,20 @@
+﻿@model MelStore.Services.Produtos.Queries.ProdutoModel
+
+<form asp-action="Edit" method="post">
+    <div asp-validation-summary="All"></div>
+    <input type="hidden" asp-for="Id" value=@Model?.Id />
+    <div class="mb-3">
+        <label class="form-label" asp-for="Nome">Nome do produto:</label>
+        <input class="form-control" asp-for="Nome" placeholder="Seu nome" value=@Model?.Nome />
+    </div>
+    <div class="mb-3">
+        <label class="form-label" asp-for="Descricao">Desc~rição:</label>
+        <textarea class="form-control" asp-for="Descricao" placeholder="Descrição do produto">@Model?.Descricao</textarea>        
+    </div>
+    <div class="mb-3">
+        <label class="form-label" asp-for="Preco">Preço do produto:</label>
+        <input class="form-control" asp-for="Preco" value=@Model?.Preco />
+    </div>
+    <button class="btn btn-primary" type="submit">Salvar</button>
+</form>
+

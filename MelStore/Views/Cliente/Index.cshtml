@@ -1,0 +1,21 @@
+﻿@model IEnumerable<MelStore.Services.Clientes.Queries.ClienteModel>
+
+<a class="btn btn-primary" asp-action="Add">Novo Cliente</a>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nome</th>      
+      <th scope="col">Ação</th>      
+    </tr>
+  </thead>
+  <tbody>
+      @foreach(var p in Model) {
+    <tr>
+      <th scope="row">@p.Id</th>
+      <td>@p.Nome</td>
+      <td><a class="btn btn-outline-primary" asp-action="Edit" asp-route-id="@p.Id">Editar</a></td>
+    </tr>
+      }
+  </tbody>
+</table>

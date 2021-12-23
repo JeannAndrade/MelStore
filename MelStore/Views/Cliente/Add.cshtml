@@ -1,0 +1,10 @@
+﻿@model MelStore.Services.Clientes.Commands.CreateCliente.ClienteForCreationModel
+
+<form asp-action="Add" method="post">
+    <div asp-validation-summary="All"></div>
+    <div class="mb-3">
+        <label class="form-label" asp-for="Nome">Nome do Cliente:</label>
+        <input class="form-control" asp-for="Nome" placeholder="Seu nome" />
+    </div>
+    <button class="btn btn-primary" type="submit">Salvar</button>
+</form>

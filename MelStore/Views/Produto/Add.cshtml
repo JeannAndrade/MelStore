@@ -1,0 +1,18 @@
+﻿@model MelStore.Services.Produtos.Commands.CreateProduto.ProdutoForCreationModel
+
+<form asp-action="Add" method="post">
+    <div asp-validation-summary="All"></div>
+    <div class="mb-3">
+        <label class="form-label" asp-for="Nome">Nome do produto:</label>
+        <input class="form-control" asp-for="Nome" placeholder="Seu nome" />
+    </div>
+    <div class="mb-3">
+        <label class="form-label" asp-for="Descricao">Descrição do projeto:</label>
+        <textarea class="form-control" asp-for="Descricao" placeholder="Descreva o produto"></textarea>        
+    </div>
+    <div class="mb-3">
+        <label class="form-label" asp-for="Preco">Preço de venda:</label>
+        <input class="form-control" asp-for="Preco" />
+    </div>
+    <button class="btn btn-primary" type="submit">Salvar</button>
+</form>

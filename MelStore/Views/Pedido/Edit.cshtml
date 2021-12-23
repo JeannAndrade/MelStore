@@ -1,0 +1,71 @@
+﻿@using System.Globalization
+@model MelStore.Services.Pedidos.Queries.ObterPedidoPorId.PedidoModel
+
+@section Styles {
+<link rel="stylesheet" href="/lib/jqueryui/themes/base/jquery-ui.css">
+}
+<form class="row g-3" asp-action="Edit" method="post">
+    <div asp-validation-summary="All"></div>
+
+    <div class="col-md-6">
+        <label class="form-label" asp-for="NomeCliente">Nome do Cliente:</label>
+        <input class="form-control" asp-for="NomeCliente" placeholder="Nome do cliente que realizou o pedido" value="@Model.NomeCliente" />
+    </div>
+    <div class="col-md-6">
+        <label class="form-label" asp-for="Data">Data do Pedido:</label>
+        <input class="form-control" asp-for="Data" value="@Model.Data.ToString("yyyy-MM-ddThh:mm", CultureInfo.InvariantCulture)" />
+    </div>
+
+    <div class="col-md-6">
+        <label class="form-label">Nome do Produto:</label>
+        <input class="form-control" id="NomeProduto" />
+    </div>
+    <div class="col-md-3">
+        <label class="form-label">Preço Unitário:</label>
+        <input class="form-control" id="PrecoUnitario" />
+    </div>
+    <div class="col-md-2">
+        <label class="form-label">Quantidade:</label>
+        <input class="form-control" type="number" id="Quantidade" />
+    </div>
+    <div class="col-md-1">
+        <label class="form-label">Ação:</label>
+        <button type="button" id="btnAdicionar" class="btn btn-outline-info">Add</button>
+    </div>
+    <div class="col-md-12">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Produto</th>
+                    <th scope="col">Preço Unitário</th>
+                    <th scope="col">Quantidade</th>
+                </tr>
+            </thead>
+            <tbody>
+                @{
+                    int index = 1;
+                    @foreach (var item in Model.ItensPedido)
+                    {
+                        <tr>
+                            <th scope="row">@(index++)</th>
+                            <td>@item.NomeProduto</td>
+                            <td>@item.PrecoUnitario</td>
+                            <td>@item.Quantidade</td>
+                        </tr>
+                    }
+                }
+            </tbody>
+        </table>
+    </div>
+    <div id='hiddenFields'>
+    </div>
+    <button class="btn btn-primary" type="submit">Salvar</button>
+
+</form>
+
+@section Scripts {
+<script src="/lib/jquery/jquery.js"></script>
+<script src="/lib/jqueryui/jquery-ui.js"></script>
+<script src="/js/pedido.js"></script>
+}

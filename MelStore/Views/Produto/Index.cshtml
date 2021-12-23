@@ -1,0 +1,28 @@
+﻿@model IEnumerable<MelStore.Services.Produtos.Queries.ProdutoModel>
+
+<a class="btn btn-primary" asp-action="Add">Novo Produto</a>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nome</th>
+            <th scope="col">Descrição</th>
+            <th scope="col">Preço</th>
+            <th scope="col">Ação</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var p in Model)
+        {
+            <tr>
+                <th scope="row">@p.Id</th>
+                <td>@p.Nome</td>
+                <td>@p.Descricao</td>
+                <td>@String.Format("{0:C2}", @p.Preco)</td>
+                <td><a class="btn btn-outline-primary" asp-action="Edit" asp-route-id="@p.Id">Editar</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+

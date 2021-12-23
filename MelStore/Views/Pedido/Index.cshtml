@@ -1,0 +1,26 @@
+﻿@model IEnumerable<MelStore.Services.Pedidos.Queries.ObterListaPedido.PedidoForListModel>
+
+<a class="btn btn-primary" asp-action="Add">Novo Pedido</a>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Cliente</th>
+      <th scope="col">Data</th>
+      <th scope="col">Qtde itens</th>
+      <th scope="col">Total Pedido</th>      
+    </tr>
+  </thead>
+  <tbody>
+      @foreach(var p in Model) {
+    <tr>
+      <th scope="row">@p.Id</th>
+      <td>@p.NomeCliente</td>
+      <td>@p.Data</td>
+      <td>@p.QuantidadeItens</td>
+      <td>@String.Format("{0:C2}", @p.ValorTotal)</td>
+      <td><a class="btn btn-outline-primary" asp-action="Edit" asp-route-id="@p.Id">Editar</a></td>
+    </tr>
+      }
+  </tbody>
+</table>
